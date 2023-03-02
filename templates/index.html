@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div id="mymodal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header" id="modalHeader">
+                <span class="close">&times;</span>
+
+            </div>
+            <div class="modal-body" id="modalBody">
+                <table class="table">
+                    <thead class="thead-dark">
+                        {% for header in modalHeaders %}
+                        <th scope="col">{{ header }}</th>
+                        {% endfor %}
+                    </thead>
+                    <tbody id="modalrows">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" id="previus"> Previous Page </button>
+        <button type="button" class="btn btn-secondary" id="next"> Next Page </button>
+    </div>
+
+    <table class="table">
+        <thead class = "thead-dark">
+            {% for header in headers %}
+            <th scope="col">{{ header }}</th>
+            {%  endfor %}
+        </thead>
+        <tbody id="rows">
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
